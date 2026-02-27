@@ -1,11 +1,28 @@
-<div align="center">
+# EduResult Pro - Deployment Guide
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+This project is optimized for seamless deployment on **Netlify** and **Vercel**.
 
-  <h1>Built with AI Studio</h2>
+## 🚀 One-Click Deployment
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### Netlify
+1. Connect your GitHub repository to Netlify.
+2. Netlify will automatically detect the `netlify.toml` file.
+3. **Build Command:** `npm run build`
+4. **Publish Directory:** `dist`
+5. (Optional) Add `GEMINI_API_KEY` in Environment Variables if using AI features.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### Vercel
+1. Connect your GitHub repository to Vercel.
+2. Vercel will automatically detect the `vercel.json` file.
+3. **Framework Preset:** Vite
+4. **Build Command:** `npm run build`
+5. **Output Directory:** `dist`
+6. (Optional) Add `GEMINI_API_KEY` in Environment Variables if using AI features.
 
-</div>
+## 🛠 Local Development
+1. Install dependencies: `npm install`
+2. Start dev server: `npm run dev`
+3. Build for production: `npm run build`
+
+## 📄 SPA Routing
+Both configurations include rules to handle Single Page Application (SPA) routing, ensuring that all paths are redirected to `index.html` so React Router (if added) or internal routing works correctly.
